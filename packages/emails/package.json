@@ -1,0 +1,30 @@
+{
+  "name": "@repo/emails",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": "./dist/index.js",
+    "./templates": "./dist/templates/index.js"
+  },
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup && email dev --dir ./src/templates --port 3004",
+    "export": "email export --dir ./src/templates"
+  },
+  "dependencies": {
+    "@react-email/components": "0.5.5",
+    "react": "catalog:react19",
+    "react-dom": "catalog:react19", 
+    "react-email": "4.2.12"
+  },
+  "devDependencies": {
+    "@react-email/preview-server": "4.2.12",
+    "@repo/tsconfig": "workspace:*",
+    "@types/react": "catalog:react19",
+    "@types/react-dom": "catalog:react19",
+    "tsup": "catalog:",
+    "typescript": "catalog:"
+  }
+}

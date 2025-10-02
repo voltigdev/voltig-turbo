@@ -1,0 +1,27 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
+  "extends": ["@repo/biome-config"],
+  "formatter": {
+    "lineWidth": 100
+  },
+  "linter": {
+    "rules": {
+      "suspicious": {
+        "noConsole": "off"
+      }
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.config.{js,ts}", "**/metro.config.js", "**/babel.config.js"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useImportType": "off"
+          }
+        }
+      }
+    }
+  ]
+}
+

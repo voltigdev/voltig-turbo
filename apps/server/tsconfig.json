@@ -1,0 +1,20 @@
+{
+  "extends": "@repo/tsconfig/base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "module": "ESNext",
+    "target": "ES2022",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "lib": ["ES2022"],
+    "noEmit": false,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@repo/*": ["../../packages/*"]
+    }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}

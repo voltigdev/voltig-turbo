@@ -1,0 +1,44 @@
+{
+  "name": "app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev --port 3001",
+    "start": "node .output/server/index.mjs",
+    "build": "vite build",
+    "serve": "vite preview",
+    "test": "vitest run",
+    "format": "biome format",
+    "lint": "biome lint",
+    "check": "biome check"
+  },
+  "dependencies": {
+    "@repo/web-ui": "workspace:*",
+    "@tailwindcss/vite": "catalog:viteConfig",
+    "@tanstack/react-devtools": "catalog:",
+    "@tanstack/react-query": "catalog:",
+    "@tanstack/react-query-devtools": "catalog:",
+    "@tanstack/react-router": "catalog:",
+    "@tanstack/react-router-devtools": "catalog:",
+    "@tanstack/react-router-ssr-query": "catalog:",
+    "@tanstack/react-start": "catalog:",
+    "@tanstack/router-plugin": "catalog:",
+    "react": "catalog:react19",
+    "react-dom": "catalog:react19",
+    "vite-tsconfig-paths": "catalog:viteConfig"
+  },
+  "devDependencies": {
+    "@repo/biome-config": "workspace:*",
+    "@repo/tailwind-config": "workspace:*",
+    "@repo/tsconfig": "workspace:*",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:react19",
+    "@types/react-dom": "catalog:react19",
+    "@vitejs/plugin-react": "catalog:viteConfig",
+    "jsdom": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:viteConfig",
+    "vitest": "catalog:viteConfig",
+    "web-vitals": "catalog:"
+  }
+}

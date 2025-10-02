@@ -1,0 +1,58 @@
+{
+  "name": "voltig-turbo",
+  "private": true,
+  "engines": {
+    "node": ">=22.20.0",
+    "pnpm": ">=10.17.1"
+  },
+  "packageManager": "pnpm@10.17.1",
+  "scripts": {
+    "maestro:test": "maestro test ./.maestro/all.yaml",
+    "build": "turbo run build",
+    "clean": "git clean -xdf node_modules",
+    "prebuild:development": "turbo -F mobile prebuild:development",
+    "prebuild:production": "turbo -F mobile prebuild:production",
+    "clean:workspaces": "turbo run clean",
+    "dev": "turbo watch dev --continue",
+    "auth:generate:development": "pnpm -F @repo/auth generate:development",
+    "auth:generate:production": "pnpm -F @repo/auth generate:production",
+    "db:generate:development": "turbo -F @repo/db db-generate:development",
+    "db:generate:production": "turbo -F @repo/db db-generate:production",
+    "db:migrate:development": "turbo -F @repo/db migrate:development",
+    "db:migrate:production": "turbo -F @repo/db migrate:production",
+    "db:push:development": "turbo -F @repo/db push:development",
+    "db:push:production": "turbo -F @repo/db push:production",
+    "db:studio:development": "turbo -F @repo/db studio:development",
+    "db:studio:production": "turbo -F @repo/db studio:production",
+    "format": "biome format .",
+    "format:fix": "biome format --write .",
+    "lint:ws": "pnpm dlx sherif@latest",
+    "postinstall": "pnpm lint:ws",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "check": "biome check .",
+    "check:fix": "biome check --write .",
+    "typecheck": "turbo run typecheck",
+    "ui-add": "turbo run ui-add",
+    "android:development": "pnpm -F mobile run:android:development",
+    "android:production": "pnpm -F mobile run:android:production",
+    "ios:development": "pnpm -F mobile run:ios:development",
+    "ios:production": "pnpm -F mobile run:ios:production"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.4",
+    "@repo/biome-config": "workspace:*",
+    "@turbo/gen": "^2.5.8",
+    "turbo": "^2.5.8",
+    "typescript": "catalog:"
+  },
+  "pnpm": {
+    "overrides": {
+      "react-native-css": "3.0.0",
+      "metro-runtime": "0.83.1",
+      "@expo/metro-runtime": "6.1.2",
+      "lightningcss": "1.30.1"
+    }
+  },
+  "version": "1.0.0"
+}

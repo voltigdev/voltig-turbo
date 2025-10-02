@@ -1,0 +1,54 @@
+{
+  "name": "@repo/db",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./src/index.ts"
+    },
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "default": "./src/client.ts"
+    },
+    "./schema": {
+      "types": "./dist/schema.d.ts",
+      "default": "./src/schema.ts"
+    }
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsup",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "dev": "tsup --watch",
+    "migrate:production": "pnpm with-env:production drizzle-kit migrate",
+    "migrate:development": "pnpm with-env:development drizzle-kit migrate",
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "check": "biome check .",
+    "check:fix": "biome check --write .",
+    "push": "pnpm with-env drizzle-kit push",
+    "db-generate:production": "pnpm with-env:production drizzle-kit generate",
+    "db-generate:development": "pnpm with-env:development drizzle-kit generate",
+    "studio": "pnpm with-env drizzle-kit studio",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false",
+    "with-env:production": "dotenv -e ../../.env --",
+    "with-env:development": "dotenv -e ../../.env.development --"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.44.4",
+    "drizzle-zod": "^0.8.2",
+    "postgres": "^3.4.7",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/tsconfig": "workspace:*",
+    "@types/node": "catalog:",
+    "dotenv-cli": "catalog:",
+    "drizzle-kit": "0.31.5",
+    "tsup": "catalog:",
+    "typescript": "catalog:"
+  }
+}

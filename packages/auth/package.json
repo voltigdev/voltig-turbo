@@ -1,0 +1,40 @@
+{
+  "name": "@repo/auth",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./middleware": "./src/middleware.ts",
+    "./client": "./src/client.ts",
+    "./env": "./env.ts"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "format": "biome check --write",
+    "lint": "biome",
+    "generate:production": "pnpm with-env:production pnpx @better-auth/cli generate --output ../db/src/auth-schema.ts",
+    "generate:development": "pnpm with-env:development pnpx @better-auth/cli generate --output ../db/src/auth-schema.ts",
+    "typecheck": "tsc --noEmit",
+    "with-env:production": "dotenv -e ../../.env --",
+    "with-env:development": "dotenv -e ../../.env.development --"
+  },
+  "dependencies": {
+    "@better-auth/expo": "catalog:betterAuth",
+    "@repo/db": "workspace:*",
+    "@repo/emails": "workspace:*",
+    "@t3-oss/env-core": "catalog:",
+    "better-auth": "catalog:betterAuth",
+    "react": "catalog:react19",
+    "react-dom": "catalog:react19",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@better-auth/cli": "catalog:betterAuth",
+    "@repo/tsconfig": "workspace:*",
+    "@types/react": "catalog:react19",
+    "dotenv-cli": "catalog:",
+    "typescript": "catalog:"
+  }
+}

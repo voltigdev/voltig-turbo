@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Expo App",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "jsx": "react-native",
+    "lib": ["ES2022"],
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "checkJs": false,
+    "resolveJsonModule": true,
+    "moduleResolution": "Bundler"
+  }
+}

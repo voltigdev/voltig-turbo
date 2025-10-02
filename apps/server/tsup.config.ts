@@ -1,0 +1,52 @@
+import { defineConfig } from "tsup";
+
+export default defineConfig({
+  entry: ["src/server.ts"],
+  format: ["esm"],
+  target: "node22",
+  platform: "node",
+  dts: false,
+  clean: true,
+  bundle: true,
+  minify: false,
+  sourcemap: true,
+  external: [
+    // Node.js built-ins
+    "fs",
+    "path",
+    "os",
+    "crypto",
+    "stream",
+    "buffer",
+    "util",
+    "events",
+    "url",
+    "querystring",
+    "net",
+    "http",
+    "https",
+    "assert",
+    "child_process",
+    "worker_threads",
+    // Production dependencies that should not be bundled
+    "fastify",
+    "@fastify/cors",
+    "@trpc/server",
+    "drizzle-orm",
+    "postgres",
+    "zod",
+    "@t3-oss/env-core",
+    "better-auth",
+    "@react-email/components",
+    "react-email",
+    "dotenv",
+  ],
+  noExternal: [
+    // Bundle all workspace packages
+    "@repo/api",
+    "@repo/auth",
+    "@repo/db",
+    "@repo/emails",
+    "@repo/validators",
+  ],
+});
