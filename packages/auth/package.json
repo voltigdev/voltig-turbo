@@ -33,6 +33,7 @@
   "devDependencies": {
     "@better-auth/cli": "catalog:betterAuth",
     "@repo/tsconfig": "workspace:*",
+    "@types/node": "catalog:",
     "@types/react": "catalog:react19",
     "dotenv-cli": "catalog:",
     "typescript": "catalog:"

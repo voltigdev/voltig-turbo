@@ -204,7 +204,7 @@ export class UserProfile extends React.Component {
 ### Styling
 
 - Use Tailwind CSS utility classes
-- Use components from `@repo/web-ui`
+- Use components from `@repo/ui`
 - Follow mobile-first responsive design
 - Support dark mode
 

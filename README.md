@@ -312,7 +312,7 @@ pnpm -F <workspace> <command>  # Short alias
 # Examples:
 pnpm -F mobile dev
 pnpm -F server build
-pnpm -F @repo/web-ui typecheck
+pnpm -F @repo/ui typecheck
 ```
 
 ## Application Ports
@@ -360,7 +360,7 @@ pnpm -F @repo/web-ui typecheck
 | 🔌 **[@repo/api](packages/api/README.md)**       | tRPC API definitions and routers         |
 | 🔐 **[@repo/auth](packages/auth/README.md)**     | Better Auth configuration                |
 | 🗄️ **[@repo/db](packages/db/README.md)**         | Drizzle schemas and database client      |
-| 🎨 **[@repo/web-ui](packages/web-ui/README.md)** | React component library (46+ components) |
+| 🎨 **[@repo/ui](packages/web-ui/README.md)** | React component library (46+ components) |
 | 📧 **[@repo/emails](packages/emails/README.md)** | React Email templates                    |
 
 ---

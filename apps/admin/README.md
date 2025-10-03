@@ -21,7 +21,7 @@ Visit `http://localhost:3002`
 - **Vite** 7 (build tool)
 - **Tailwind CSS** 4
 - **Biome** (linting + formatting)
-- **@repo/web-ui** (shared component library)
+- **@repo/ui** (shared component library)
 - **tRPC** (type-safe API client)
 
 ## Building For Production

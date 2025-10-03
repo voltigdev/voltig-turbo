@@ -13,7 +13,7 @@
     "check": "biome check"
   },
   "dependencies": {
-    "@repo/web-ui": "workspace:*",
+    "@repo/ui": "workspace:*",
     "@tailwindcss/vite": "catalog:viteConfig",
     "@tanstack/react-devtools": "catalog:",
     "@tanstack/react-query": "catalog:",

@@ -1055,7 +1055,7 @@ graph TB
 
 📦 **Packages**
 
-- `@repo/web-ui` - UI components
+- `@repo/ui` - UI components
 - `@repo/api` - API definitions
 - `@repo/db` - Database schemas
 - `@repo/validators` - Shared schemas

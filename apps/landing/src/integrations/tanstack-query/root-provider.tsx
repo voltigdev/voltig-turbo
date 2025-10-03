@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { DesignSystemProvider } from '@repo/web-ui/providers'
+import { DesignSystemProvider } from '@repo/ui/providers'
 import React from 'react'
 
 export function getContext() {
